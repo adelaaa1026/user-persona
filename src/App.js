@@ -27,22 +27,22 @@ function App() {
       <main>
         <section id="introduction">
           <div className="container">
-            <h1>Dropdown Redesign</h1>
+            <h1>User Persona Research</h1>
             <div className="intro-grid">
               <div>
-                <p className="title-description">Have you ever noticed the dropdowns or checkboxes on a website? Have you ever tried using a keyboard to interact with them and found it challenging? These elements, known as <b>components</b>, are reusable building blocks that designers use to create consistent and functional interfaces. 
-                 Today, most digital interfaces rely on a predefined set of components, and ensuring their accessibility is essential. However, accessibility can vary across different applications.</p>
-
+                <p className="title-description">Everyone has encountered objects with exceptionally good design: like a ramen bowl with a built-in hole for chopsticks, a chair that provides excellent back support, or a self-ordering kiosk that makes the ordering process seamless. Have you ever wondered how the designers behind these products, despite never meeting you as a user, created something that feels so intuitive to interact with?
+Well, even though they haven't met you in person, they conducted extensive user experience research through interviewing users, creating personas, and analyzing interactions. They have a deep understanding of your needs without ever meeting you.
+ 
+</p>
                  <p className="title-description">
-                   In this case study, we will closely examine the accessibility of dropdown menus in three commonly used applications:
-                   <ul>
+                 In this case study, we will conduct similar user persona research to gain an in-depth understanding of how users interact with self-ordering kiosks in a bubble tea shop. We first interviewed three users, created two personas based on these interviews, and developed a storyboard.
+                   {/* <ul>
                      <li>Google Docs</li>
                      <li>MacOS File System</li>
                      <li>Brown CS Website</li>
-                   </ul>
+                   </ul> */}
                  </p>
 
-                 <p className="title-description">By analyzing these dropdowns, we want to understand how well they support accessibility and where improvements can be made.</p>
               </div>
                
             </div>
@@ -51,138 +51,124 @@ function App() {
 
         <section id="input">
           <div className="container">
-            <h2>Part I: Input</h2>
-            <p className="subtitle-description">One way to make components accessible is to allow users to do things <b>multiple ways</b> (inputs). Here we compare and contrast ways of inputs (<b>mouse</b>, <b>keyboard</b>, and <b>touch</b>) across the three applications.</p>
+            <h2>Part I: Interface</h2>
+            <p className="subtitle-description">The self-ordering kiosk helps customers order drinks so that the staff can focus on making drinks. It allows customers to browse the menu, customize their drinks, and pay for their orders. There are in total two kiosks in the shop. They are located along the way to the counter, so customers can place their orders first and then wait at the counter.
+</p>
             
-            <div className="app-screenshots">
-              <div className="screenshot">
-                <img src="google-docs.png" alt="Google Docs dropdown interface" />
-                <p>Google Docs Dropdown</p>
-              </div>
-              <div className="screenshot">
-                <img src="macos.png" alt="MacOS File System dropdown" />
-                <p>MacOS File System</p>
-              </div>
-              <div className="screenshot">
-                <img src="brown-cs.png" alt="Brown CS Website dropdown" />
-                <p>Brown CS Website</p>
-              </div>
+            <div className="interface-section">
+              <img 
+                src={process.env.PUBLIC_URL + '/annotated_kiosk.png'} 
+                alt="Kiosk" 
+                className="interface-image"
+              />
+              
             </div>
-
-            <div className="comparison-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Input Method</th>
-                    <th>Google Docs</th>
-                    <th>MacOS File System</th>
-                    <th>Brown CS Website</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Mouse</td>
-                    <td>
-                      <ul>
-                        <li>Submenu navigation is difficult - requires detoured path to reach items (see the blue path in the screenshot below)</li>
-                        <li>Direct path causes submenu to disappear (see the red path in the screenshot below)</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>Uses "shifting triangle" for easier submenu navigation</li>
-                        <li>Submenu stays open when moving between menu items</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>Simple navigation with no submenus</li>
-                        <li>Clear visual feedback with orange highlight</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Keyboard</td>
-                    <td>
-                      <ul>
-                        <li>Good accessibility with keyboard shortcuts</li>
-                        <li>Arrow keys for menu navigation</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>No default keyboard shortcuts</li>
-                        <li>Can be customized in System Preferences</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>Poor keyboard support</li>
-                        <li>Cannot access menu items with keyboard</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Touch</td>
-                    <td>
-                      <ul>
-                        <li>Direct tap access to submenus</li>
-                        <li>Easier than mouse navigation</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>No touch screen support</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>Direct tap navigation</li>
-                        <li>No hover effects in touch mode</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-            </div>
-
-            <div className="illustration">
-              <img src="Google-doc-mouse-illustration.png" alt="Illustration of mouse paths in Google Docs dropdown" />
-              <p className="illustration-caption">Illustration of mouse paths in Google Docs dropdown</p>
-            </div>
+          
           </div>
         </section>
 
-        <section id="output">
+        <section id="input">
           <div className="container">
-            <h2>Part II: Output</h2>
-            <p className="subtitle-description">Another way to make components accessible is to allow users to do things multiple ways (outputs). Here we compare and contrast ways of outputs (<b>styles</b>, <b>voiceover</b>, <b>focus order</b>, etc) across the three applications.</p>
+            <h2>Part II: Observation and Interview</h2>
+            <p className="subtitle-description">The self-ordering kiosk helps customers order drinks so that the staff can focus on making drinks. It allows customers to browse the menu, customize their drinks, and pay for their orders. There are in total two kiosks in the shop. They are located along the way to the counter, so customers can place their orders first and then wait at the counter.</p>
             
-            <div className="output-list">
+            
+
+            <h3>Observation</h3>
+            <div className="observation-list">
+            <p>
+                  We visited the bubble tea shop during a busy hour (3 PM on a Friday), and two lines naturally formed in front of the kiosks. There were two large illuminated boards on the left side of the line displaying the menu and pictures of the top nine most popular drinks. While waiting in line, some customers looked at the board to decide what to order and discussed their choices with friends, while others simply browsed their phones. The following observations were noted.
+                </p>
+              <ul>
+                 
+
+                <li>
+                  <strong>Who They Order With:</strong> Once it was their turn to use the kiosk, users who were with friends usually looked at the kiosk together, while individual customers used it alone.
+                </li>
+
+                <li>
+                  <strong>Step 1: Enter Mobile Number:</strong> The first step prompted users to enter their phone number. While most people entered their number, a few chose to skip this step.
+                </li>
+
+                <li>
+                  <strong>Step 2: Choose the Drink:</strong> The second step involved browsing the menu. Two different ordering behaviors were observed. Users who already knew what they wanted used the navigation bar on the left to quickly find their desired section (e.g., "Aroma of Fruits"). Once they located their drink, they proceeded directly to the next step. On the other hand, users who were still deciding typically scrolled through the menu from top to bottom. They tapped on multiple drinks to explore their options before making a final decision and proceeding.
+                </li>
+
+                <li>
+                  <strong>Step 3: Customize the Drink:</strong> Despite some predetermined drink options, most bubble tea drinks were highly customizable. Users could adjust sugar levels, ice levels, boba types, and more. Each drink offered different customization options. For example, some drinks allowed ice level adjustments but not sugar levels. Certain customizations were only available on weekends (e.g., dragon fruit boba). Categories that couldn't be customized were shown in grey. This step was typically completed quickly.
+                </li>
+
+                <li>
+                  <strong>Step 4: Pay for the Order:</strong> Once customers had finished ordering, they were shown a preview of their order and had the option to remove or add drinks. Most users didn't make any changes at this step. After confirming their order, they proceeded to payment. Only credit cards were accepted, and the credit card reader was attached to the right side of the kiosk. However, the reader wasn't immediately noticeable, as many kiosks in other locations have their card readers positioned below the screen. Since the kiosk had a minimalist design, users took a moment to examine it before locating the reader.
+                </li>
+
+                <li>
+                  <strong>Step 5: Enter Name and Receive Order Number:</strong> Users then entered their name and received an order number.
+                </li>
+              </ul>
+            </div>
+
+            <h3>Interview</h3>
+            <div className="observation-list">
               <ul>
                 <li>
-                  <strong>Background Color:</strong> All three applications use background color changes as visual cues when users hover over or click dropdown items. Specifically, Google Docs turns the background dark gray, a common highlight color used to draw users' attention. MacOS changes it to light green, which may be intended to align with the overall styling of MacOS. The Brown CS website turns it orange, creating a strong contrast with the surrounding blue, unfocused items. This deliberate design choice uses color contrast to draw users' attention.
+                  <strong>Is this the first time you have used this kiosk? How did you feel when interacting with the kiosk? What stood out to you?</strong>
+                  <ul>
+                    <li>All users were returning customers of the bubble tea shop, so they had used the kiosk before</li>
+                    <li>They noted that the overall design was very simple, and they liked the large touchscreen. They described the interface as intuitive and the ordering process as smooth.</li>
+                  </ul>
                 </li>
-                
+
                 <li>
-                  <strong>Floating Label:</strong> When hovering over a dropdown, Google Docs has a unique floating label feature, where a black box appears and displays the function of the dropdown (e.g., "Styles," "Font"). This allows mouse users to understand the function of the dropdown without clicking and provides better information for users relying on VoiceOver. MacOS and the Brown CS website do not have this feature.
+                  <strong>Were there any points where you felt uncertain or confused while using the kiosk? If so, what were they?</strong>
+                  <ul>
+                    <li>The phone number at the entry step received complaints from all three users. They felt slightly uncomfortable providing personal information upfront before even having a chance to review their order. Additionally, there was no clear "skip" option. While a line stated, "The phone number is used for collecting reward points," there was no further explanation of how the reward system worked or whether entering a phone number was mandatory.</li>
+                    <li>Moreover, one long-time user noted that the reward system had recently changed. Previously, after entering their phone number, users would see a message like, "You are X drinks away from a free drink." Now, it simply states, "You now have 30 points," without explaining what the numerical value means.</li>
+                    <li>Another source of confusion was the varying levels of customization for drinks. Users were unsure why some drinks could be made hot while others couldn't. They wondered if this was due to a machine issue or another restriction. Users suggested that clear labels, such as "Sugar level is fixed for this drink," would help clarify the options.</li>
+                    <li>Additionally, users were uncertain about how to collect their drinks. In the final step, users were asked to provide their name and were given an order number. However, it wasn't clear whether they needed to keep the number or if it would be used to identify their order. Unlike many other kiosks, this one did not print receipts, leaving users without any proof of their purchase. One user mentioned that she took a picture of the order number just in case it was needed.</li>
+                  </ul>
                 </li>
-                
+
                 <li>
-                  <strong>Border:</strong> On the Brown CS website, clicking a menu item changes its border from invisible to white. This serves as an additional visual cue (in addition to the background color change) to indicate a state change and is also visually appealing.
+                  <strong>How did the kiosk influence your decision-making process when choosing drinks? Did the interface provide enough guidance or feedback to help you complete your order confidently?</strong>
+                  <ul>
+                    <li>Users noted that the navigation bar with different sections was very clear and helped them browse categories easily (e.g., "Aroma of Milk Tea," "Dessert," etc.).</li>
+                    <li>They also appreciated the pictures, which provided an intuitive and visually appealing way to understand drink options.</li>
+                    <li>Each drink included a detailed description introducing its tea base and toppings. Some users found this helpful for making a decision without feeling overwhelmed by information. However, others felt that the drink labels were already self-explanatory and that the additional descriptions were unnecessary.</li>
+                  </ul>
                 </li>
-                
+
                 <li>
-                  <strong>Arrows:</strong> Google Docs includes a small downward arrow on the right side of the dropdown to indicate that users can click to expand the menu. After clicking, the arrow flips upward, signaling that it can be clicked again to collapse the menu. MacOS and the Brown CS website do not have this feature.
+                  <strong>In terms of navigation, how easy was it to browse the menu and pay for your drinks?</strong>
+                  <ul>
+                    <li>Users found the flow smooth and efficient. The kiosk responded quickly, with no noticeable loading time or freezing. Each step had a clear button at the bottom right to proceed to the next step.</li>
+                  </ul>
                 </li>
-                
+
                 <li>
-                  <strong>VoiceOver:</strong> Overall, Google Docs provides more comprehensive VoiceOver support. For example, when hovering over the dropdown menu, VoiceOver on Google Docs states, "You are currently on a toolbar. To interact with the items, press Control-Option-Shift-Down Arrow," specifying the precise location and potential next steps. In contrast, MacOS does not have VoiceOver output at all, and the Brown CS website only provides the vague message, "You are currently on web content." This occurs because VoiceOver on the Brown CS website only recognizes interactive elements and does not include the dropdown menu, so it only acknowledges that the user is on the webpage without offering additional information.
+                  <strong>If you could change one thing about the kiosk interface, what would it be and why?</strong>
+                  <ul>
+                    <li>Aligned with observed user behavior, some users noted that the card reader was attached to the right side of the kioskand was not very noticeable. They suggested adding an arrow or visual cue on the interface to direct attention to the card reader.</li>
+                    <li>Some users also felt that there were too many steps in the ordering process—entering a phone number, choosing a drink, customizing, entering a name, etc. They suggested simplifying or streamlining the process.</li>
+                  </ul>
                 </li>
-                
+
                 <li>
-                  <strong>Focus Order:</strong> Overall, MacOS provides the best focus order. It is logical and consistent, allowing users to navigate from left to right using the Tab key without skipping any items. Submenus can be accessed using the up and down arrow keys. In Google Docs, the focus order follows the general layout, beginning with the editing menu, then scrolling, followed by outlines, and finally the document content. However, it skips individual items in the editing menu (e.g., "File," "Edit," "View"), preventing direct navigation through them. On the Brown CS website, users cannot navigate the dropdown menu using the keyboard at all because the Tab key only moves through interactive components, such as the search box, and does not include menu dropdowns.
+                  <strong>How does using the kiosk compare to ordering in person? Which do you prefer?</strong>
+                  <ul>
+                    <li>Most users preferred using the kiosk, while one user didn't mind either option.</li>
+                    <li>Users felt that the kiosk removed the pressure of ordering at the counter, allowing them to take their time to customize their drinks comfortably.</li>
+                    <li>Additionally, the kiosk provided more detailed information about the drinks, making it easier to explore new options without having to ask staff multiple questions. Users who preferred ordering at the counter mentioned that they already knew what they wanted, so they didn't feel the need to browse other drink options.</li>
+                    <li>Some users also noted that when using the kiosk, they felt more comfortable selecting a 0% tip, as opposed to tipping in person.</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>How often do you visit Ten One? When do you usually go?</strong>
+                  <ul>
+                    <li>User visit frequency ranged from once a week to once every few months.</li>
+                    <li>Common occasions included hanging out with friends or buying a drink to stay awake for afternoon work. Users were generally in a good mood when visiting the shop.</li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -191,83 +177,60 @@ function App() {
 
         <section id="state-models">
           <div className="container">
-            <h2>Part III: State Models</h2>
-            <p className="subtitle-description">After understanding the inputs and outputs of the dropdown components in the three applications, we can explore ways to improve their accessibility design. We chose to redesign Google Docs, focusing specifically on mouse and keyboard users. In this section, we use state models, which visualize how a user may interact with the component, to present both the original design and the new design.</p>
+            <h2>Part III: Personas</h2>
+            <p className="subtitle-description">Now that we have in-depth understanding of the users' behavior and preferences when interacting with the kiosk, we can create two personas based on the observations and interviews.</p>
 
-            <div className="state-model-section">
-              <h3>Mouse User</h3>
-              <div className="state-comparison">
-                <div className="state-image">
-                  <img src="mouse-old-state-model.png" alt="Original mouse user state model" />
-                  <p>Original Design: Mouse users must follow a precise path to access submenus</p>
-                </div>
-                <div className="state-image">
-                  <img src="mouse-new-state-model.png" alt="New mouse user state model" />
-                  <p>Improved Design: Added delay before submenu closes and wider clickable area</p>
-                </div>
-              </div>
+            <div className="personas">
+              <div className="persona">
+                <h3>Relaxed Jenny</h3>
+                <p className="persona-description">Relaxed Jenny is a sophomore in college. It's a sunny Friday afternoon, and her friends suggest they hang out at a bubble tea shop.</p>
+                
+                <div className="persona-details">
+                  <h4>Interface Problems:</h4>
+                  <ul>
+                    <li>She felt uncomfortable entering her phone number but proceeded to do so.</li>
+                    <li>She experienced information overload, as each drink had very detailed descriptions, making it difficult for her to decide.</li>
+                    <li>It took her some time to locate the card reader when she was ready to pay.</li>
+                  </ul>
 
-              <div className="design-changes">
-                <div className="change">
-                  <h4>Change 1: Hover to Expand</h4>
-                  <p>I removed the requirement to click to expand dropdown items. Now, the dropdown expands directly upon hover, eliminating the need for a mouse click.</p>
-                  
-                  <p >This improves the efficiency of user navigation, especially for first-time users, as they can immediately see the expanded submenu items without needing to click.</p>
-                  
-                  <p className="trade-off"><strong>Trade-offs:</strong> However, this change comes with a trade-off. The interface may become slightly more crowded since all submenus will expand upon hover, which could be less ideal for repeated users who are already familiar with the submenu content.</p>
+                  <h4>Why Relaxed Jenny Represents Users:</h4>
+                  <ul>
+                    <li>Like Jenny, many users visit the boba shop in a lighthearted mood, looking to spend time with friends. They don't have a go-to drink and usually take their time exploring all the available options. This can be overwhelming, and recommendations from friends may further contribute to information overload.</li>
+                    <li>Many of these users, especially first-time visitors, don't use the kiosk frequently. As a result, they feel uncertain about entering their phone number and are unsure where to tap their credit card.</li>
+                  </ul>
                 </div>
-
-                <div className="change">
-                  <h4>Change 2: Improved Submenu Navigation</h4>
-                  <p>I added <b>"shifting triangle"</b> for expanded submenus to make it easier to reach an item in submenu; I also added <b>time delay</b> to make it harder for the expanded submenu to collapse.</p>
-                  
-                  <p>This change solves a major issue in Google Doc dropdowns: when a user tries to click a submenu item by moving the cursor in a straight line, the submenu collapses as the cursor briefly leaves the submenu region (this path is highlighted in red in the diagram). The only reliable way to reach the submenu is by taking a less direct, detoured path, which is unintuitive and inefficient (highlighted in blue).</p>
-                  
-                  <p>The first part of this change introduces a "shifting triangle," which prevents the submenu from disappearing when the cursor temporarily leaves its region while moving toward a submenu item. This adjustment accommodates users with shaky hands and enhances accessibility. The second part adds a time delay, reducing the likelihood of the expanded submenu collapsing too quickly.</p>
-                  
-                  <p className="trade-off"><strong>Trade-off:</strong> These changes improve learnability and accessibility by allowing users to follow an intuitive straight-line path to the submenu item rather than taking a detour. However, efficiency may be slightly compromised for users who prefer to close the submenu by moving the cursor out of the region, as they now have to wait for the time delay.</p>
+                <div className="persona-image">
+                  <img 
+                    src={process.env.PUBLIC_URL + '/relaxed_jenny_map.png'} 
+                    alt="Jenny" 
+                    className="persona-illustration"
+                  />
                 </div>
               </div>
 
-            </div>
+              <div className="persona">
+                <h3>Rushed Andrew</h3>
+                <p className="persona-description">Rushed Andrew is a senior in college. He just finished lunch at the dining hall and decided to grab a milk tea before his 1 PM class because he stayed up until 2 AM last night working on his homework.</p>
+                
+                <div className="persona-details">
+                  <h4>Interface Problems:</h4>
+                  <ul>
+                    <li>As Andrew is short on time, he feels frustrated by the many steps required to place an order, including entering his phone number, name, and customization preferences.</li>
+                    <li>Since the boba tea shop occasionally changes the order of drinks on the menu, it was difficult for Andrew to quickly find the drink he had in mind.</li>
+                  </ul>
 
-            <div className="state-model-section">
-              <h3>Keyboard User</h3>
-              <div className="state-comparison">
-                <div className="state-image">
-                  <img src="keyboard-old-state-model.png" alt="Original keyboard interaction state model" />
-                  <p>Original Design: Limited keyboard navigation with inconsistent focus order</p>
+                  <h4>Why Rushed Andrew Represents Users:</h4>
+                  <ul>
+                    <li>Like Andrew, many users visit the boba shop when they are in a hurry, often between classes or meetings. They typically have a specific drink in mind and just want a fast, efficient ordering process.</li>
+                    <li>For these users, excessive steps and required inputs create friction, making the kiosk feel slow and inconvenient. Additionally, changes in menu layout disrupt their usual ordering flow, forcing them to search for their preferred drink rather than selecting it quickly. These challenges can lead to frustration and may even discourage users from using the kiosk in the future.</li>
+                  </ul>
                 </div>
-                <div className="state-image">
-                  <img src="keyboard-new-state-model.png" alt="Improved keyboard interaction state model" />
-                  <p>Improved Design: Consistent tab order and arrow key navigation for all menu items</p>
-                </div>
-              </div>
-
-              <div className="design-changes">
-                <div className="change">
-                  <h4>Change 1: Left Arrow to Close Submenu</h4>
-                  <p>Currently, there's no way to close an expanded submenu without exiting the entire dropdown. Adding the <b>left arrow key</b> to close the submenu makes it more efficient for users to return to the parent item.</p>
-                  
-                  <p>This change is also easy to learn since the right arrow expands the submenu, so it's intuitive that the left arrow should close it.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="state-model-section">
-              <h3>Example Designs</h3>
-              <p>Based on our analysis above, we have redesigned the dropdown for mouse users. Here we present the "Default" state and "Submenu expanded" state.</p>
-              
-              <div className="design-states">
-                <div className="state-image-row">
-                  <div className="design-state">
-                    <img src="initial-state-design.png" alt="Initial state design" />
-                    <p>Initial State</p>
-                  </div>
-                  <div className="design-state">
-                    <img src="hover-state-design.png" alt="Hover state design" />
-                    <p>Hover Over Submenu Item State</p>
-                  </div>
+                <div className="persona-image">
+                  <img 
+                    src={process.env.PUBLIC_URL + '/rushed_andrew_map.png'} 
+                    alt="Andrew" 
+                    className="persona-illustration"
+                  />
                 </div>
               </div>
             </div>
@@ -276,33 +239,19 @@ function App() {
 
         <section id="reflection">
           <div className="container">
-            <h2>Part IV: Reflection</h2>
+            <h2>Part IV: Storyboard</h2>
             <div>
-              <p><strong>What do these three applications do well:</strong></p>
-              <p>MacOS File's learnability for keyboard users is excellent. On the right side of most menu items, the corresponding keyboard shortcut is explicitly displayed (e.g., "Ctrl + Option + U"). This makes navigation easier for first-time and occasional users.</p>
-              <p>Brown CS does a great job of providing multiple cues for a single action. For example, when a submenu item is clicked, not only does the background color change to bright orange, but the item also gains a white border. These cues are not only visually appealing but also enhance the user experience by making interactions smoother.</p>
-              <p>When a user hovers, clicks, etc., Google Docs always provides feedback, such as darkening the background. This ensures that each user action is accompanied by visual cues, helping them understand what the action does and how to achieve the functionality they want.</p>
-              
-              <br />
-              
-              <p><strong>Examples of how the accessibility/inaccessibility of inputs and outputs in the three applications could also impact users with impairments either positively or negatively, respectively:</strong></p>
-              <p>Positive example: Google Docs provides comprehensive accessibility support. Every action that can be performed with a mouse can also be completed using only the keyboard. It is also highly intuitive with great learnability. I watched a YouTube tutorial and became comfortable navigating the page using only the keyboard within five minutes.</p>
-              <p>Negative example: The Brown CS website has poor accessibility support for keyboard users. Only interactive elements, such as the search bar, can be reached. Users cannot select menu items, making it impossible to navigate to subpages.</p>
-              
-              <br />
-              
-              <p><strong>Accessibility considerations that were not addressed that we accounted for in our design:</strong></p>
-              <p>The submenu disappears when the cursor moves slightly outside its boundary, making navigation difficult for users with motor impairments or shaky hands. We solved this problem by implementing a "shifting triangle" and adding a delay before collapsing the submenu to improve accessibility.</p>
-              
-              <br />
-              
-              <p><strong>Between mouse, keyboard, touch/mobile, and screen reader users, which are most commonly prioritized in the process of creating components?</strong></p>
-              <p>Mouse users are definitely the most commonly prioritized when designing components, as they make up the majority of users. This means that when there is a conflict or tradeoff in functionality between mouse users and other users, mouse users are given priority. For example, many drag-and-drop interactions (e.g., file uploads, rearranging items) lack keyboard alternatives such as arrow keys or shortcuts.</p>
-              
-              <br />
-              
-              <p><strong>In her work at Mismatch.design and Google, Kat Holmes is helping other designers to rethink inclusive design not as a remedy for "personal health conditions" but as solves for "mismatches" — moments where human interactions are hindered by an absence of appropriate design solutions. How did our redesign solve a "mismatch" in our world?</strong></p>
-              <p>Our redesign solves a "mismatch" by addressing the lack of an intuitive way to close submenus for keyboard users. Previously, there wasn't a way for users to collapse an expanded submenu but had to exit the entire dropdown. This makes navigation inefficient and frustrating. By introducing the left arrow key to close submenus, we created a logical and learnable interaction that aligns with how users expect keyboard navigation to work—right to expand, left to collapse. This makes the experience more inclusive for keyboard users.</p>
+              <p>
+                Now we choose Relaxed Jenny as our persona, and create a storyboard to illustrate the user interaction with the kiosk.
+              </p>
+
+              <div className="storyboard-section">
+                <img 
+                  src={process.env.PUBLIC_URL + '/story_board.png'} 
+                  alt="Storyboard" 
+                  className="storyboard-image"
+                />
+              </div>
             </div>
           </div>
         </section>

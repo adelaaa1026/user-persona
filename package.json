@@ -1,5 +1,5 @@
 {
-  "name": "acc-web",
+  "name": "user-persona",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,9 +38,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://adelaaa1026.github.io/UIUX-case-study-dropdown/",
+  "homepage": "https://adelaaa1026.github.io/user-persona/",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
-
 }
