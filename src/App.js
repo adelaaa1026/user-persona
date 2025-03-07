@@ -30,7 +30,7 @@ function App() {
             <h1>User Persona Research</h1>
             <div className="intro-grid">
               <div>
-                <p className="title-description">Everyone has encountered objects with exceptionally good design: like a ramen bowl with a built-in hole for chopsticks, a chair that provides excellent back support, or a self-ordering kiosk that makes the ordering process seamless. Have you ever wondered how the designers behind these products, despite never meeting you as a user, created something that feels so intuitive to interact with?
+                <p className="title-description">Everyone has interacted with products with exceptionally good design: like a ramen bowl with a built-in hole for chopsticks, a chair that provides excellent back support, or a self-ordering kiosk that makes the ordering process seamless. Have you ever wondered how the designers behind these products, despite never meeting you as a user, created something that feels so intuitive to interact with?
 Well, even though they haven't met you in person, they conducted extensive user experience research through interviewing users, creating personas, and analyzing interactions. They have a deep understanding of your needs without ever meeting you.
  
 </p>
@@ -70,7 +70,7 @@ Well, even though they haven't met you in person, they conducted extensive user 
         <section id="input">
           <div className="container">
             <h2>Part II: Observation and Interview</h2>
-            <p className="subtitle-description">The self-ordering kiosk helps customers order drinks so that the staff can focus on making drinks. It allows customers to browse the menu, customize their drinks, and pay for their orders. There are in total two kiosks in the shop. They are located along the way to the counter, so customers can place their orders first and then wait at the counter.</p>
+          
             
             
 
@@ -83,7 +83,7 @@ Well, even though they haven't met you in person, they conducted extensive user 
                  
 
                 <li>
-                  <strong>Who They Order With:</strong> Once it was their turn to use the kiosk, users who were with friends usually looked at the kiosk together, while individual customers used it alone.
+                  <strong>Who They Order With:</strong> Users who were with friends usually looked at the kiosk together, while individual customers used it alone.
                 </li>
 
                 <li>
@@ -110,6 +110,9 @@ Well, even though they haven't met you in person, they conducted extensive user 
 
             <h3>Interview</h3>
             <div className="observation-list">
+            <p>
+              We conducted interviews with three users to gather more insights into their ordering experiences. The following are the questions and some key findings from the interviews.
+            </p>
               <ul>
                 <li>
                   <strong>Is this the first time you have used this kiosk? How did you feel when interacting with the kiosk? What stood out to you?</strong>
